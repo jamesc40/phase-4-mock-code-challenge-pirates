@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :pirates, only: [:index, :show, :destroy]
+  resources :islands, only: [:index]
+  resources :treasures, only: [:create]
 end
